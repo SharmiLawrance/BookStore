@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Baskervville+SC&family=Roboto+Slab:wght@100..900&display=swap');
+
+body{
+  margin: 0;
+  padding : 0;
+  box-sizing: border-box;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+
+
+}
+/* Loading Animation */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #25b09b;
+  margin-left: 50%;
+  margin-top: 20%;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+/*  Header  */
+.header{
+  background-color: #3dc1d3;
+  margin: auto -16px;
+  margin-bottom: 10px;
+  padding: 5px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;  
+  top: 0%;
+  z-index: 1000;
+}
+.title{
+  color: white;
+  font-family: "McLaren", cursive;
+  font-size: 22px;
+  font-weight: 500;
+
+}
+.book-icon{
+  font-size: 35px;
+  float: left;
+  padding-right: 5px;
+  text-decoration: none;
+  color: white;
+}
+.card-container{
+  width: 280px;
+  height: 400px;
+  background-color: #f0e6cf;
+  margin-left: 10px;
+  margin-top: 75px;
+  border-radius: 9px;
+ /* box-shadow: 5px 5px 2px #ceb882;*/
+  text-align: center;
+
+}
+.book-img{
+  width: 120px;
+  height: 150px;
+  border: 1px solid grey;
+  margin-top: 30px;
+  border-radius: 2px;
+  box-shadow: 5px 5px 10px gray
+}  
+.icon{
+  font-size: 20px;
+  float: left;
+  margin-left: 30px;
+  margin-right: 8px;
+  color: black;
+}
+
+.year-icon{
+  color: black;
+  margin-right: 10px;
+}
+.book-name{
+  font-size: 20px;
+  font-family: "Baskervville SC";
+  font-weight: 700;
+  color: #30336b;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  flex-grow: 0;
+  padding: 2px;
+}
+.author-name{
+  font-size: 15px;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  color:#786fa6;
+  position: absolute;
+  flex: 0;
+}
+.year{
+  position: absolute;
+  margin-top: 52px;
+  margin-left: 30px;
+  font-size: 15px;
+  color: #786fa6;
+}
+.icon-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 110px;
+  margin-bottom: 10px;
+}
+.bottom-icons{
+  font-size: 20px;
+  text-decoration: none;
+  color: #596275;
+}
+.grid-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  margin-left: 20px;
+}
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    align-items: center;
+  }
+  .card-container{
+    width: 70%;
+    margin-left: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin:auto;
+    align-items: center;
+  }
+  .card-container{
+    width: 70%;
+    margin-left: 80px;
+  }
+}
+/*  SHOWCARD  */
+.show-book-container{
+  display: flex;
+}
+.show-img-container{
+  border-radius: 8px;
+  border-bottom-right-radius: 3px;
+  width: 310px;
+  height:350px;
+  align-content: center;
+  margin-top: 120px;
+  margin-left :80px;
+  box-shadow: 5px 5px 5px #ecf0f1;
+  padding: 5px;
+}
+.show-card-img{
+  width: 300px;
+  height: 350px;
+  border-radius: 5px;
+
+}
+.show-description-container{
+  margin-top: 120px;
+  border-radius: 8px;
+  border-bottom-left-radius: 3px;
+  padding: 40px;
+  padding-left: 50px;
+  background-color: #ecf0f1;
+  width: 50%;
+  flex-grow: 0;
+}
+.show-book-title{
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  color: #2980b9;
+}
+.author-name-right{
+  float: inline-end;
+
+}
+.book-description{
+  text-align: justify;
+  margin-top: 30px;
+  padding-right: 60px;
+  padding-bottom: 10px;
+  text-indent: 2em;
+  color: #7f8c8d;
+  font-size: 18px;
+}
+
+
+@media (max-width: 1200px) {
+    .show-book-container{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .show-img-container{
+      margin-left: 0;
+    }
+    .show-description-container{
+      margin-top: 20px;
+      width: 50%;
+      
+    }
+}
+/* Delete Confirmation */
+.delete-book{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+.confirmation-container{
+  
+  background-color: #f0e6cf;
+  width: 100%;
+  max-width: 400px;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 280px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.confirmation-msg{
+  margin-bottom: 30px;
+  text-align: center;
+}
+.button-container{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.btn{
+  padding: 10px;
+  margin: 30px;
+  width: 120px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+}
+.cancel-btn{
+  background-color: #95a5a6;
+}
+.delete-btn{
+  background-color: #ff6b6b;
+}
+
+
+.add-book-btn{
+  font-size: 50px;
+  float: right;;
+  left: 90%;
+  cursor: pointer;
+  position: static;
+}
+@media (max-width: 600px) {
+  .confirmation-container {
+    padding: 15px; 
+    width: 90%; 
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+}
+label{
+  display: block;
+  margin-bottom: 2px;
+  font-family: "Roboto Slab";
+}
+.create-book-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.create-book-heading {
+  font-family: "Arsenal Sc";
+  color: #636e72;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 85px;
+  margin-bottom: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.input-form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  background-color: #dff9fb;
+  padding: 30px;
+  width: 40%;
+  margin-left: 28%;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px #dfe6e9;
+}
+
+.input-form-container > div {
+  width: 100%;
+  margin-bottom: 15px;
+}
+input{
+  width:100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px #00cec9 ;
+  border-radius: 5px;
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid #02bcb9; 
+  box-shadow: none; 
+}
+
+.save-btn{
+  margin-top:10px;
+  width: 130px;
+  padding:8px;
+  border-radius: 8px;
+  background-color: #00cec9;
+  border: none;
+  color: white;
+}
+.save-btn:hover{
+  background-color: #028e8c;
+}
+@media (max-width: 600px) {
+  .input-form-container {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
